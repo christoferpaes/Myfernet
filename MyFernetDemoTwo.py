@@ -14,7 +14,7 @@ fernet = Fernet(fernet_key)
 encrypted_payload = fernet.encrypt(plaintext_payload.encode())
 
 # Create the packet with the encrypted payload
-packet = IP(dst="192.168.0.1") / ICMP() / encrypted_payload
+packet = IP(dst="") / ICMP() / encrypted_payload
 
 # Send the packet
 send(packet)
